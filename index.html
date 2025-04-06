@@ -59,3 +59,35 @@
             padding: 15px;
             font-size: 16px;
             cursor: pointer;
+            border-radius: 5px;
+        }
+        .product button:hover {
+            background-color: #218838; /* Ciemniejszy zielony po najechaniu */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Sklep z książką</h1>
+        <p>Kup książkę i zacznij swoją podróż literacką już teraz!</p>
+    </header>
+
+    <section>
+        <div class="product">
+            <img src="book-cover.jpg" alt="Okładka książki">
+            <h2>PROEZJA</h2>
+            <p>Autor: Kościelski</p>
+            <p>Wciągająca opowieść pełna emocji, pełna mocy słów. Przeczytaj już teraz!</p>
+            <div class="price">Cena: 39,99 zł</div>
+            <!-- Przycisk do płatności PayPal -->
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="TWÓJ_ID_PRZYCISKU_PAYPAL">
+                <button type="submit">Kup teraz</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>
