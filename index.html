@@ -10,42 +10,44 @@
     
     <style>
         body {
-            font-family: 'Merriweather', serif; /* Użycie czcionki Merriweather */
+            font-family: 'Merriweather', serif;
             margin: 0;
             padding: 0;
-            background-color: #121212; /* Ciemne tło */
-            color: #ffffff; /* Biały tekst */
-            overflow: hidden;
+            background-color: #121212;
+            color: #ffffff;
+            overflow: hidden; /* Zablokowanie przewijania */
         }
         header {
-            background-color: #1c1c1c; /* Ciemniejszy nagłówek */
+            background-color: #1c1c1c;
             color: #ffffff;
             padding: 20px;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtelny cień */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         section {
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 40px 20px;
+            flex-wrap: wrap; /* Dodanie obsługi wielu produktów */
+            gap: 20px;
         }
         .product {
-            background-color: #333333; /* Ciemne tło produktu */
+            background-color: #333333;
             padding: 20px;
-            border-radius: 12px; /* Zaokrąglone rogi */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Cień wokół produktu */
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             width: 300px;
             text-align: center;
-            transition: transform 0.3s ease-in-out; /* Animacja dla efektu hover */
+            transition: transform 0.3s ease-in-out;
         }
         .product:hover {
-            transform: translateY(-10px); /* Podnosi produkt przy najechaniu */
+            transform: translateY(-10px);
         }
         .product img {
             width: 100%;
             height: auto;
-            border-radius: 8px; /* Zaokrąglone rogi okładki */
+            border-radius: 8px;
         }
         .product h2 {
             margin: 20px 0;
@@ -54,17 +56,17 @@
         }
         .product p {
             font-size: 16px;
-            color: #cccccc; /* Jaśniejszy tekst */
+            color: #cccccc;
             margin-bottom: 20px;
         }
         .product .price {
             font-size: 18px;
             font-weight: 500;
-            color: #ffbb33; /* Kolor ceny */
+            color: #ffbb33;
             margin-bottom: 20px;
         }
         .product button {
-            background-color: #ff5733; /* Nowoczesny kolor przycisku */
+            background-color: #ff5733;
             color: white;
             border: none;
             padding: 15px;
@@ -74,19 +76,55 @@
             transition: background-color 0.3s ease;
         }
         .product button:hover {
-            background-color: #e04e1c; /* Ciemniejszy odcień po najechaniu */
+            background-color: #e04e1c;
         }
     </style>
 </head>
 <body>
 
+    <header>
+        <h1>Sklep z książką</h1>
+        <p>Kup książkę i zacznij swoją podróż literacką już teraz!</p>
+    </header>
+
     <section>
+        <!-- Pierwszy produkt -->
         <div class="product">
-            <img src="cov.webp" alt="Okładka książki">
+            <img src="okladka1.jpg" alt="Okładka książki 1">
             <h2>PROEZJA</h2>
-            <p>Kościelskiego</p>
-            <p>288 stron</p>
-            <div class="price">Cena: 101,01</div>
+            <p>Autor: Kościelski</p>
+            <p>Wciągająca opowieść pełna emocji, pełna mocy słów. Przeczytaj już teraz!</p>
+            <div class="price">Cena: 39,99 zł</div>
+            <!-- Przycisk do płatności PayPal -->
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="TWÓJ_ID_PRZYCISKU_PAYPAL">
+                <button type="submit">Kup teraz</button>
+            </form>
+        </div>
+
+        <!-- Drugi produkt -->
+        <div class="product">
+            <img src="okladka2.jpg" alt="Okładka książki 2">
+            <h2>WIDMÓR</h2>
+            <p>Autor: Nowak</p>
+            <p>Opowieść pełna tajemnic, które wciągają na każdej stronie. Sprawdź już teraz!</p>
+            <div class="price">Cena: 29,99 zł</div>
+            <!-- Przycisk do płatności PayPal -->
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="TWÓJ_ID_PRZYCISKU_PAYPAL">
+                <button type="submit">Kup teraz</button>
+            </form>
+        </div>
+
+        <!-- Trzeci produkt -->
+        <div class="product">
+            <img src="okladka3.jpg" alt="Okładka książki 3">
+            <h2>OPISANIE RZECZY</h2>
+            <p>Autor: Kowalski</p>
+            <p>Nowa powieść, która porusza najbardziej nieoczekiwane tematy. Przeczytaj już teraz!</p>
+            <div class="price">Cena: 49,99 zł</div>
             <!-- Przycisk do płatności PayPal -->
             <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                 <input type="hidden" name="cmd" value="_s-xclick">
