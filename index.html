@@ -24,11 +24,24 @@
             background-color: #121212; /* Kolor tła jako backup */
         }
 
- /* Dodajemy media query dla ekranów mobilnych */
+/* Dodajemy media query dla ekranów mobilnych */
 @media (max-width: 768px) {
     body {
-        background-position: center center; /* Zapewnia, że tło jest wyśrodkowane */
-        background-attachment: fixed; /* Utrzymujemy tło jako statyczne, nawet na urządzeniach mobilnych */
+        background-size: cover; /* Na urządzeniach mobilnych tło będzie wypełniać ekran */
+        background-attachment: scroll; /* Wyłączamy fixed na urządzeniach mobilnych */
+    }
+    
+    /* Przypisujemy tło bezpośrednio do kontenera */
+    .background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('https://raw.githubusercontent.com/koscielskiego/proezja/main/images/tlo.jpg');
+        background-size: cover;
+        background-position: center center;
+        z-index: -1; /* Zapewnia, że tło nie zasłania treści */
     }
 }
         
