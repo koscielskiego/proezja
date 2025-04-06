@@ -23,7 +23,12 @@
             background-attachment: fixed;
             background-color: #121212; /* Kolor tła jako backup */
         }
-      
+      /* Dodajemy media query dla ekranów mobilnych */
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll; /* Zmiana tła na scrollowalne na urządzeniach mobilnych */
+    }
+}
         section {
             display: flex;
             justify-content: center;
